@@ -1,0 +1,33 @@
+.error-content p {
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 36px;
+	color: #666;
+	margin-top: 13px;
+}
+.error-content .error-footer .restart-btn {
+	padding: 14px 74px;
+}
+.error-content .error-footer button {
+	margin: 0 40px;
+}
+
+@media screen and (orientation: landscape) {
+	/* 横屏样式 */
+	.error-content #error-img {
+		margin-top: 210px;
+	}
+	.error-content .error-footer {
+		margin-top: 56px;
+	}
+}
+
+@media screen and (orientation: portrait) {
+	/* 竖屏样式 */
+	.error-content #error-img {
+		margin-top: 320px;
+	}
+	.error-content .error-footer {
+		margin-top: 120px;
+	}
+}

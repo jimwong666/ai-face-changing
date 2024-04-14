@@ -1,0 +1,83 @@
+.red-star {
+	position: absolute;
+	width: 100%;
+	z-index: 2;
+}
+.reality-photo {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	z-index: 1;
+}
+
+.reality-photo .reality-photo-container {
+	position: relative;
+	width: 418px;
+	height: 577px;
+	box-sizing: border-box;
+	padding: 20px 20px 0;
+	/* border-image: linear-gradient(180deg, #ffffff 0%, #ffffff 100%) 1; */
+	border: 1px solid #fff;
+	border-radius: 20px;
+	background: linear-gradient(
+		164deg,
+		#ffffff 7%,
+		rgba(255, 246, 246, 0.7603) 15%,
+		rgba(239, 246, 250, 0.9744) 91%,
+		#eee7e5 98%
+	);
+	box-shadow: -2px 14px 106px 0px rgba(237, 144, 134, 0.62);
+	z-index: 1;
+}
+
+.reality-photo .reality-photo-container .photo img {
+	border-radius: 10px;
+	width: 100%;
+}
+
+.reality-photo .reality-photo-container .photo-logo {
+	position: absolute;
+	bottom: 30px;
+	left: 20px;
+}
+.reality-photo .reality-photo-shadow {
+	width: 418px;
+	height: 29px;
+	margin-top: 22px;
+}
+
+.reality-photo .reality-photo-footer button {
+	margin: 0 40px;
+}
+
+@media screen and (orientation: landscape) {
+	/* 横屏样式 */
+	.reality-photo .reality-photo-container {
+		margin-top: 80px;
+	}
+	.reality-photo .reality-photo-footer {
+		margin-top: 50px;
+	}
+	.red-star img {
+		margin-left: 424px;
+		margin-top: 46px;
+	}
+}
+
+@media screen and (orientation: portrait) {
+	/* 竖屏样式 */
+	.reality-photo .reality-photo-container {
+		margin-top: 250px;
+	}
+	.reality-photo .reality-photo-footer {
+		margin-top: 150px;
+	}
+	.red-star img {
+		margin-left: 424px;
+		margin-top: 216px;
+	}
+}

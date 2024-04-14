@@ -1,0 +1,248 @@
+@keyframes imgLoding {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+.ai-photo {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	z-index: 1;
+}
+
+.ai-photo .ai-photo-title {
+	font-weight: 900;
+	line-height: 1.5;
+	color: #3d3d3d;
+}
+.ai-photo .ai-photo-container {
+	display: flex;
+}
+.ai-photo .ai-photo-container .ai-photo-content {
+	transition: all 0.5s ease-in-out;
+	z-index: 1;
+}
+.ai-photo .ai-photo-container .ai-photo-content.checked {
+	transform: scale(1.05);
+}
+.ai-photo .ai-photo-container .ai-photo-content.checked .photo {
+	box-shadow: -2px 14px 106px 0px rgba(237, 144, 134, 1);
+}
+.ai-photo .ai-photo-container .ai-photo-content .photo {
+	position: relative;
+	width: 418px;
+	height: 622px;
+	box-sizing: border-box;
+	margin: 0 29px;
+	padding: 20px 20px 0;
+	/* border-image: linear-gradient(180deg, #ffffff 0%, #ffffff 100%) 1; */
+	border: 1px solid #fff;
+	border-radius: 20px;
+	background: linear-gradient(
+		164deg,
+		#ffffff 7%,
+		rgba(255, 246, 246, 0.7603) 15%,
+		rgba(239, 246, 250, 0.9744) 91%,
+		#eee7e5 98%
+	);
+	box-shadow: -2px 14px 106px 0px rgba(237, 144, 134, 0.62);
+	z-index: 1;
+}
+.ai-photo .ai-photo-container .ai-photo-content .photo .version-img {
+	position: relative;
+	width: 378px;
+	height: 540px;
+}
+.ai-photo
+	.ai-photo-container
+	.ai-photo-content.ready
+	.photo
+	.version-img::before {
+	content: "";
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 56px;
+	border-radius: 0 0 10px 10px;
+	background: url("../../assets/photo-cover.svg") no-repeat bottom;
+}
+.ai-photo
+	.ai-photo-container
+	.ai-photo-content.ready
+	.photo
+	.version-img::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	bottom: 8px;
+	width: 70px;
+	height: 70px;
+	background: url("../../assets/maike.png") 100%/100% no-repeat;
+}
+.ai-photo
+	.ai-photo-container
+	.ai-photo-content
+	.photo
+	.version-img
+	.ai-img-loading-outter {
+	display: none;
+	position: absolute;
+	transform: translateX(-50%);
+	left: 50%;
+	top: 399px;
+	width: 182px;
+	height: 16px;
+	margin: auto;
+	box-sizing: border-box;
+	border: 1px solid #f56e67;
+	border-radius: 8px;
+	padding: 1px;
+}
+.ai-photo
+	.ai-photo-container
+	.ai-photo-content
+	.photo
+	.version-img
+	.ai-img-loading {
+	display: block;
+	height: 12px;
+	border-radius: 6px;
+	background: linear-gradient(
+		270deg,
+		#f56e67 31%,
+		rgba(216, 216, 216, 0) 84%
+	);
+	animation: imgLoding 1.8s infinite;
+	transition: all 1.8s ease-in-out;
+}
+.ai-photo
+	.ai-photo-container
+	.ai-photo-content
+	.photo
+	.version-img
+	.ai-img-txt {
+	display: none;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 27px;
+	text-align: center;
+	color: #b88a5d;
+	position: absolute;
+	top: 433px;
+	left: 16%;
+	width: 68%;
+}
+.ai-photo
+	.ai-photo-container
+	.ai-photo-content.noReady
+	.photo
+	.version-img
+	.ai-img-loading-outter,
+.ai-photo
+	.ai-photo-container
+	.ai-photo-content.noReady
+	.photo
+	.version-img
+	.ai-img-txt {
+	display: block;
+}
+.ai-photo
+	.ai-photo-container
+	.ai-photo-content.failed
+	.photo
+	.version-img
+	.ai-img-loading-outter,
+.ai-photo
+	.ai-photo-container
+	.ai-photo-content.failed
+	.photo
+	.version-img
+	.ai-img-txt {
+	display: none;
+}
+
+.ai-photo .ai-photo-container .ai-photo-content .photo .version-img img {
+	width: 100%;
+	border-radius: 10px;
+	height: 540px;
+}
+.ai-photo .ai-photo-container .ai-photo-content .photo .version-other {
+	color: #444;
+	font-size: 24px;
+	font-weight: 700;
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+}
+.ai-photo .ai-photo-container .ai-photo-content .photo-shadow {
+	width: 418px;
+	height: 29px;
+	margin: 22px 29px 0;
+}
+.ai-photo
+	.ai-photo-container
+	.ai-photo-content
+	.photo
+	.version-other
+	.check-input {
+	border: 2px solid #e5e5e5;
+	background: #eee;
+}
+.ai-photo
+	.ai-photo-container
+	.ai-photo-content.ready
+	.photo
+	.version-other
+	.check-input {
+	border: 2px solid #e64545;
+}
+.ai-photo
+	.ai-photo-container
+	.ai-photo-content.ready
+	.photo
+	.version-other
+	.check-input.checked {
+	background: #e64545;
+}
+
+.ai-photo .ai-photo-footer button {
+	margin: 0 40px;
+}
+.ai-photo .ai-photo-footer button.print-photo-btn {
+	padding: 15px 110px;
+}
+
+@media screen and (orientation: landscape) {
+	/* 横屏样式 */
+	.ai-photo .ai-photo-title {
+		font-size: 24px;
+		margin-top: 40px;
+	}
+	.ai-photo .ai-photo-container {
+		margin-top: -20px;
+		transform: scale(0.8);
+	}
+}
+
+@media screen and (orientation: portrait) {
+	/* 竖屏样式 */
+	.ai-photo .ai-photo-title {
+		font-size: 32px;
+		margin-top: 70px;
+	}
+	.ai-photo .ai-photo-container {
+		margin-top: 100px;
+	}
+	.ai-photo .ai-photo-footer {
+		margin-top: 140px;
+	}
+}

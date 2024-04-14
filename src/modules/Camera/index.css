@@ -1,0 +1,99 @@
+.glass {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	backdrop-filter: blur(200px); /* 模糊效果 */
+	z-index: 1;
+	opacity: 0;
+}
+.glass.show {
+	opacity: 1;
+}
+.face-camera {
+	height: 100%;
+	width: 100%;
+	background-color: rgb(128, 128, 128);
+}
+.face-camera .cameraVideo {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	overflow: hidden;
+	opacity: 1;
+	transition: opacity 0.5s ease-in-out;
+}
+
+.face-camera .cameraVideo.hidden {
+	opacity: 0;
+}
+
+.face-camera .cameraVideo.mirror {
+	transform: scaleX(-1);
+}
+
+.face-camera .face-camera-container {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+}
+.face-camera .face-camera-container #close-camera {
+	position: absolute;
+	top: 30px;
+	left: 40px;
+}
+.face-camera .face-camera-container p {
+	color: #fff;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+.face-camera .face-camera-container .face-camera-footer {
+	position: absolute;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.face-camera .face-camera-container .face-camera-footer button {
+	margin: 0 45px;
+}
+.face-camera
+	.face-camera-container
+	.face-camera-footer
+	button.camera-switch-btn {
+	padding: 0 62px;
+}
+.face-camera .face-camera-container .face-camera-footer button.snap-btn {
+	padding: 15px 58px;
+}
+.face-camera #canvas-cover {
+	position: absolute;
+	z-index: 2;
+}
+
+@media screen and (orientation: landscape) {
+	/* 横屏样式 */
+	.face-camera .face-camera-container p {
+		margin-top: 40px;
+		font-size: 24px;
+	}
+	.face-camera .face-camera-container .face-camera-footer {
+		bottom: 60px;
+	}
+}
+
+@media screen and (orientation: portrait) {
+	/* 竖屏样式 */
+	.face-camera .face-camera-container p {
+		margin-top: 75px;
+		font-size: 32px;
+	}
+	.face-camera .face-camera-container .face-camera-footer {
+		bottom: 230px;
+	}
+}

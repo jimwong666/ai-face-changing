@@ -1,0 +1,29 @@
+.stars {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	/* background: url("../../assets/star-bg.png") repeat url("../../assets/star-bg.png"); */
+	background-image: url("../../assets/star-cloud.png"),
+		url("../../assets/star-bg.png");
+	background-repeat: no-repeat, repeat; /* 分别设置每个背景图片的重复方式 */
+	background-position: right top, left top; /* 分别设置每个背景图片的位置 */
+}
+.stars .white-star {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+@keyframes star1 {
+	0% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 0.1;
+	}
+	80% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
